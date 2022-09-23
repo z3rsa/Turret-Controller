@@ -1,0 +1,116 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <title>Proyek Robotika</title>
+    <meta content='width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
+    <!-- All CSS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Monoton&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&family=Poppins&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <!-- END -->
+  </head>
+  <body>
+  <div class="navbar">
+    <h1 id="title">TURRET CONTROLLER</h1>
+  </div>
+  <div class="wrapper">
+    <div class="content">
+      <div class="row">
+        <div class="col-lg-4 col-md-6">
+          <div class="card card-chart" id="servo1">
+            <div class="card-header">
+              <h5 class="card-category">Motor Servo Base</h5>
+            </div>
+            <div class="card-body">
+              <div class="slidecontainer">
+                <input type="range" onchange="updateSliderPWM(this)" min="0" max="180" value="90" step="1" class="slider" id="slider1">
+                <p id="servoAngle">Servo Angle <span id="sliderValue1"></span><sup>o</sup></p>
+                <div class="btn-group btn-group-sm">
+                  <button id="zero" type="button" class="btn btn-primary" onclick="bClick0()">0</button>
+                  <button id="sixT" type="button" class="btn btn-primary" onclick="bClick60()">60</button>
+                  <button id="nineT" type="button" class="btn btn-primary" onclick="bClick90()">90</button>
+                  <button id="oneET" type="button" class="btn btn-primary" onclick="bClick180()">180</button>
+                </div>
+              </div>
+            </div>
+            <div class="card-footer">
+              <div class="stats" style="font-family: 'Poppins', sans-serif;">
+                0 sampai 180 Derajat
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <div class="card card-chart" id="servo2">
+            <div class="card-header">
+              <h5 class="card-category">Motor Servo Catridge</h5>
+            </div>
+            <div class="card-body">
+              <div class="slidecontainer">
+                <input type="range" onchange="updateSliderPWM(this)" min="0" max="120" value="90" step="1" class="slider" id="slider2">
+                <p id="servoAngle">Servo Angle <span id="sliderValue2"></span><sup>o</sup></p>
+                <div class="btn-group btn-group-sm">
+                    <button id="zero1" type="button" class="btn btn-primary" onclick="b1Click0()">0</button>
+                    <button id="sixT1" type="button" class="btn btn-primary" onclick="b1Click60()">60</button>
+                    <button id="oneTW" type="button" class="btn btn-primary" onclick="b1Click120()">120</button>
+                </div>
+              </div>
+            </div>
+            <div class="card-footer">
+              <div class="stats" style="font-family: 'Poppins', sans-serif;">
+                0 sampai 120 Derajat
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <div class="card card-chart" id="servo3">
+            <div class="card-header">
+              <h5 class="card-category">Motor Servo Launcher</h5>
+            </div>
+            <div class="card-body">
+              <div class="slidecontainer">
+                <input type="range" onchange="updateSliderPWM(this)" min="0" max="90" value="90" step="1" class="slider" id="slider3">
+                <p id="servoAngle">Servo Angle <span id="sliderValue3"></span><sup>o</sup></p>
+                <div class="btn-group btn-group-sm">
+                    <button id="zero" type="button" class="btn btn-primary" onclick="b2Click0()">0</button>
+                    <button id="sixT" type="button" class="btn btn-primary" onclick="b2Click60()">60</button>
+                    <button id="nineT" type="button" class="btn btn-primary" onclick="b2Click90()">90</button>
+                </div>
+              </div>
+            </div>
+            <div class="card-footer">
+              <div class="stats" style="font-family: 'Poppins', sans-serif;">
+                0 sampai 90 Derajat
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pisah">
+      <div class="container-fluid">
+        <h1><span>Owi Team<sup>TM</sup> and Designed by z3rsa. </span></h1>
+      </div>
+    </div>
+    <div class="img-robot">
+      <img src="https://drive.google.com/uc?export=view&id=1cGJPNK66pY5mbrfzNss7Wa2MfFWk1HEZ" alt="rbt-turret" srcset="" id="rbt">
+      <img src="https://drive.google.com/uc?export=view&id=1cGJPNK66pY5mbrfzNss7Wa2MfFWk1HEZ" alt="rbt-turret" srcset="" id="rbt1">
+    </div>
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  </div>
+  <div class="z3rsa-slider">
+    <div class="img-slider">
+      <img src="https://drive.google.com/uc?export=view&id=1NRBcDd-7d2ZlYuv-BnyWZyCGbmdiSK9P" alt="rbt-turret" srcset="">
+      <img src="https://drive.google.com/uc?export=view&id=1Tg0Yw2cKpz_Ve5rT3Ht4mrXX6w8PtLwd" alt="rbt-turret" srcset="">
+      <img src="https://drive.google.com/uc?export=view&id=1gOWq_ccQgkLwyc9lTd1iAeLfnYosa3Gd" alt="rbt-turret" srcset="">
+      <img src="https://drive.google.com/uc?export=view&id=17L801wrQ3IAWdTOxlReruCldQVv0tbRL" alt="rbt-turret" srcset="">
+    </div>
+  </div>
+  </body>
+</html>
